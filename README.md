@@ -9,9 +9,8 @@ Bilt with:
 - [Celery](http://www.celeryproject.org/)
 - [Flower](https://flower.readthedocs.io/en/latest/)
 - [PM2](http://pm2.keymetrics.io/)
-
-+ JSPM
-+ Angular
+- JSPM
+- Angular
 
 <br/>
 
