@@ -1,0 +1,31 @@
+/**
+ * Mixins
+ */
+ 
+// large+
+@mixin screen_gte_lg {
+   @media only screen and (min-width: $screenLgMin){
+    @content;
+  }
+}
+
+// small-
+@mixin screen_lte_sm {
+   @media only screen and (max-width: $screenLgMin - 1px){
+    @content;
+  }
+}
+
+// xs
+@mixin screen_xs {
+   @media only screen and (max-width: $screenSmallMin - 1px){
+    @content;
+  }
+}
+
+// sm
+@mixin screen_sm {
+   @media only screen and (max-width: $screenLgMin - 1px) and (min-width: $screenSmallMin){
+    @content;
+  }
+}

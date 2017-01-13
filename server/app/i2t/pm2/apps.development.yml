@@ -1,0 +1,12 @@
+# shopuld be started from this file directory
+# pm2 start <this_file>
+
+apps:
+    -   script: ../venv/bin/python3.5 
+        args: ../venv/bin/celery --app=i2t.celeryapp --loglevel=info --concurrency=1 --pool=solo worker
+        cwd: /project/server/app
+        name: i2t_worker_cpu_0
+        exec_mode: 'fork'
+        instances: 2
+        env:
+            CUDA_VISIBLE_DEVICES: ''

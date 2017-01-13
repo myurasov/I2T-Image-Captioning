@@ -1,0 +1,9 @@
+.vagrant
+.idea/
+_private/
+__pycache__
+venv/
+.DS_Store
+instance/
+/*.log
+*.pem

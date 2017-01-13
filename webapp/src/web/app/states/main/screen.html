@@ -1,0 +1,18 @@
+<div class="screen main">
+  <md-content class="md-padding" layout="row" layout-wrap>
+    <div flex="100" layout-wrap layout="row" class="title">
+      <div flex="33" flex-xs="100" class="caption" layout-align="start center" layout-align-xs="center center" layout="row">
+        Image Captioning
+      </div>
+      <div flex="33" flex-xs="100" class="settings" layout-align="center center" layout-align-xs="center center" layout="row">
+        <md-switch ng-model="$root.sound" aria-label="Sound" class="md-primary">
+          <ng-md-icon icon="volume_up" ng-style="{'fill': sound ? '#3f51b5' : '#9e9e9e'}" size="32"></ng-md-icon>
+        </md-switch>
+      </div>
+      <div flex="33" flex-xs="100" class="logo" layout-align="end center" layout-align-xs="center center" layout="row">
+        <a href="#"><img src="images/logo-bolder.svg"></a>
+      </div>
+    </div>
+    <div ui-view="content" flex="100" class="content"></div>
+  </md-content>
+</div>

@@ -1,0 +1,16 @@
+/**
+ * Layout styles
+ */
+ 
+// hide unloaded app parts
+*[ng-cloak] {
+  display: none;
+}
+
+body,
+input,
+textarea {
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}

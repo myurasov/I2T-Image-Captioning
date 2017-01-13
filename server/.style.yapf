@@ -1,0 +1,3 @@
+[style]
+# see https://github.com/google/yapf/blob/master/yapf/yapflib/style.py#L287
+BASED_ON_STYLE = google

@@ -1,0 +1,8 @@
+<md-card class="uploadedImageCard" ng-style="{'background-image': 'url(' + v.thumbnailSrc + ')'}" layout-align="center center" layout="row" ng-click="speak()">
+  <md-card-content>
+    <span class="caption" ng-if="state=='done'">
+      {{ result[0].sentence | formatCaption }}
+    </span>
+    <md-progress-circular class="md-accent" md-mode="indeterminate" md-diameter="100" ng-if="state=='working'"></md-progress-circular>
+  </md-card-content>
+</md-card>

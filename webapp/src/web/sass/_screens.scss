@@ -1,0 +1,119 @@
+.screen.main {
+  $cardHeight: 300px;
+
+  .title {
+    padding: 7px;
+    @include screen_xs {
+      padding: 0;
+    };
+
+    .caption {
+      font-size: 120%;
+      color: rgba(#000000, 0.7);
+      
+      @include screen_xs {
+        padding: 5px 0;
+      };
+    }
+
+    .logo {
+      img {
+        $h: 62px;
+        $p: 15px;
+        height: $h - 2 * $p;
+        margin: $p 0;
+        opacity: 0.7;
+      }
+
+      a:hover img {
+        opacity: 1;
+      }
+    }
+
+    .settings {
+      md-switch ng-md-icon svg {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  md-card.newCard {
+    height: $cardHeight;
+    cursor: pointer;
+    text-align: center;
+
+    ng-md-icon {
+      $iconSize: 100px;
+
+      svg {
+        margin-top: 80px;
+        width: $iconSize;
+        height: $iconSize;
+      }
+    }
+
+    md-progress-linear {
+      margin-top: -55px;
+    }
+
+    &.state_ready {
+      md-progress-linear {
+        display: none;
+      }
+    }
+
+    &.state_resizing {
+      ng-md-icon {
+        opacity: 0;
+      }
+
+      md-progress-linear.det {
+        display: none;
+      }
+    }
+
+    &.state_uploading {
+      ng-md-icon {
+        opacity: 0;
+      }
+
+      md-progress-linear.indet {
+        display: none;
+      }
+    }
+    
+    @include screen_xs {
+      height: 125px;
+      
+      ng-md-icon {
+        $iconSize: 95px;
+
+        svg {
+          margin-top: -2px;
+          width: $iconSize;
+          height: $iconSize;
+        }
+      }
+    };
+  }
+
+  md-card.uploadedImageCard {
+    cursor: pointer;
+    outline: none;
+    height: $cardHeight;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+
+    md-progress-circular {}
+
+    .caption {
+      background-color: hsla(0, 0%, 100%, 0.8);
+      padding: 5px;
+      font-size: 120%;
+      border-radius: 2px;
+      display: block;
+    }
+  }
+}

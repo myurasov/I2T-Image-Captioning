@@ -1,0 +1,10 @@
+node_modules/
+jspm_packages/
+/environment
+/revision
+_revision.js
+_templates.js
+_environment.js
+build/
+src/web/index.html
+*.local*
